@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+
+
+    {
+      "name": "Launch ASP.NET Core Backend",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/MyBackendApp/bin/Debug/net8.0/MyBackendApp.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/MyBackendApp",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/MyBackendApp/Views"
+      }
+    },
+    {
+      "name": "Launch React Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/my-frontend-app/src"
+    }
+  ]
+}
